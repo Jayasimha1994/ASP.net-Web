@@ -1,0 +1,16 @@
+﻿<div>
+    <h1 style="text-align:center">
+    {{pageHeader ? pageHeader:'No Header'}}
+    </h1><hr />
+    <my-employee></my-employee><hr />
+    <div>{{getFullName()}}</div><hr />  
+    <!--<img src="{{ImageUrl}}" style="height:100px;width:100px"/>--><hr />
+    <img [src]='ImageUrl' style="height:100px;width:100px" /><hr />
+    <button [disabled]="isDisabled">Click</button>
+    <!--<span [innerHtml]="pageHeader"></span>-->
+    <span bind-innerHtml="pageHeader"></span>
+    FirstName:<input [value]="firstName" (input)="firstName=$event.target.value"/>
+    <!--FirstName:<input [value]="firstName"  />-->
+    <br />
+    You Entered:{{firstName}}
+</div>
